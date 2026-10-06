@@ -1,0 +1,70 @@
+@Clase7BE_HostAddress = http://localhost:5008
+
+GET {{Clase7BE_HostAddress}}/api/products
+Accept: application/json
+
+###
+
+GET {{Clase7BE_HostAddress}}/api/products/3
+Accept: application/json
+
+###
+
+GET {{Clase7BE_HostAddress}}/api/products/999
+Accept: application/json
+
+###
+
+POST {{Clase7BE_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Parlantes 2.1",
+  "price": 15999.00
+}
+
+###
+
+POST {{Clase7BE_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "",
+  "price": 100
+}
+
+###
+
+PUT {{Clase7BE_HostAddress}}/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Mouse gamer",
+  "price": 4500.00
+}
+
+###
+
+PUT {{Clase7BE_HostAddress}}/api/products/999
+Content-Type: application/json
+
+{
+  "name": "Mouse gamer",
+  "price": 4500.00
+}
+
+###
+
+DELETE {{Clase7BE_HostAddress}}/api/products/2
+
+###
+
+GET {{Clase7BE_HostAddress}}/api/products/search?name=teclado
+Accept: application/json
+
+###
+
+GET {{Clase7BE_HostAddress}}/api/products/stats
+Accept: application/json
+
+###
