@@ -48,7 +48,9 @@ namespace Clase7BE.Controllers
         [HttpPost]
         public IActionResult CreateProduct(ProductForCreateDto dto)
         {
-            if (_service.ProductNameExists(dto.Name))
+            var nameExists = _service.GetAllProducts().Any(p =>
+                string.Equals(p.Name, dto.Name, StringComparison.OrdinalIgnoreCase));
+            if (nameExists)
             {
                 return Conflict("Ya existe un producto con ese nombre.");
             }

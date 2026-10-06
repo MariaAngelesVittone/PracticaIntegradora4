@@ -80,12 +80,6 @@ namespace Clase7BE.Services.Implementations
             };
         }
 
-        public bool ProductNameExists(string name)
-        {
-            return _repository.GetAllProducts().Any(p =>
-                string.Equals(p.Name, name, StringComparison.OrdinalIgnoreCase));
-        }
-
         private static ProductForReadDto ToReadDto(Product product)
         {
             return new ProductForReadDto

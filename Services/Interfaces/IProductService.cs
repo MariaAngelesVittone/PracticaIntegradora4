@@ -12,6 +12,5 @@ namespace Clase7BE.Services.Interfaces
         void DeleteProduct(int id);
         List<ProductForReadDto> SearchProductsByName(string name);
         ProductStatsDto GetStats();
-        bool ProductNameExists(string name);
     }
 }
